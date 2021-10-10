@@ -51,6 +51,12 @@ class _LoginScreenState extends State<LoginScreen> {
             Text('Access Token'),
             responsive.smallSizedBox(context),
             AppTextField(
+              obscureText: prov.passIsObscure,
+              suffix: IconButton(
+                icon: Icon(prov.passIsObscure ? Icons.visibility_off_outlined :Icons.visibility_outlined),
+                onPressed: ()=> prov.reversePassIsObscure(),
+
+              ),
               controller: prov.tokenCtrl,
               focusNode: prov.tokenFocusNode,
               textInputType: TextInputType.emailAddress,

@@ -4,10 +4,12 @@ class TimeFormatter extends StatelessWidget {
 
   final DateTime localTime24 ;
   final bool isEng;
+  final Color clr;
 
   TimeFormatter({
     @required this.localTime24,
-    @required this.isEng
+    @required this.isEng,
+    this.clr = Colors.black
   });
 
 
@@ -31,7 +33,7 @@ class TimeFormatter extends StatelessWidget {
   Widget build(BuildContext context) {
     return RichText(
       text: TextSpan(
-        style: TextStyle(color: Colors.black87),
+        style: TextStyle(color: clr),
         children: [
 
           TextSpan(text: 'Update at:  '),

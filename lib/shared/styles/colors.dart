@@ -5,7 +5,7 @@ AppClrs appClrs = AppClrs();
 
 class AppClrs{
 
-  Color mainColor = Color(0xff01C38E);
+  Color mainColor = Color(0xff019e79);
 
   Color secondColor = Colors.yellow[700];
   Color scaffoldBackgroundColorDark = Color(0xff585858);

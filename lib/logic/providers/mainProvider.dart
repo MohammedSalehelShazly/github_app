@@ -48,6 +48,11 @@ class MainProvider with ChangeNotifier{
       token: token
     );
 
+    print('..................................................');
+    print(response.data[0]['description']);
+    print('..................................................');
+
+
     if(response.statusCode == 200){
       userRepos = UserRepos.fromRes(response.data);
       await getLanguages(context, userRepos);

@@ -11,6 +11,7 @@ class AppTextField extends StatelessWidget {
   TextInputType textInputType;
   bool obscureText;
   FocusNode focusNode;
+  Widget suffix;
 
   AppTextField({
     @required this.controller,
@@ -21,6 +22,7 @@ class AppTextField extends StatelessWidget {
     this.textInputType,
     this.obscureText = false,
     this.focusNode,
+    this.suffix
   });
 
   @override
@@ -38,6 +40,7 @@ class AppTextField extends StatelessWidget {
         contentPadding: const EdgeInsets.symmetric(vertical: 0 ,horizontal: 5),
         prefixIcon: prefixIcon,
         filled: true,
+        suffixIcon: suffix,
         border: OutlineInputBorder(
           borderRadius: staticVars.borderRadius,
           borderSide: BorderSide()

@@ -27,6 +27,14 @@ class LoginProvider with ChangeNotifier{
     tokenFocusNode.dispose();
   }
 
+  bool passIsObscure = false;
+  reversePassIsObscure(){
+    passIsObscure = !passIsObscure;
+    notifyListeners();
+  }
+
+
+
   SharedPreferencesHelper sharedPrefsHelper = SharedPreferencesHelper();
 
 
