@@ -22,6 +22,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+
+
     return SafeArea(child: Consumer<MainProvider>(
       builder: (context, prov, _)=> Scaffold(
           appBar: AppBar(
@@ -53,7 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
 
           body: prov.filteredLanguages ==null
-              ? Center(child: CircularProgressIndicator())
+              ? Center(child: CircularProgressIndicator.adaptive())
               :
           ListView.builder(
             itemCount: prov.userRepos.repos.length,
